@@ -527,7 +527,7 @@ JACK := $(HOST_OUT_EXECUTABLES)/jack
 ifeq ($(USE_HOST_LEX),yes)
 LEX := flex
 else
-LEX := prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/flex/flex-2.5.39
+LEX := build/atool/flex/flex
 endif
 # The default PKGDATADIR built in the prebuilt bison is a relative path
 # external/bison/data.
@@ -537,7 +537,7 @@ BISON_PKGDATADIR := $(PWD)/external/bison/data
 ifeq ($(USE_HOST_BISON),yes)
 BISON := $(HOST_OUT_EXECUTABLES)/bison
 else
-BISON := prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/bison/bison
+BISON := build/atool/bison/bison
 endif
 YACC := $(BISON) -d
 
